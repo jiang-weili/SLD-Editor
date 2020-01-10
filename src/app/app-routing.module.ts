@@ -13,24 +13,24 @@ import {UserTypeResolverService} from '../services/user-type-resolver.service';
 
 const routes: Routes = [
 {
-  path: 'dashboard',
-  component: DashboardComponent,
-  children: dashboardRoutes,
-  canActivate: [AuthGuard],
-  resolve: {
-    userType: UserTypeResolverService,
-  }
+    path: 'dashboard',
+    component: DashboardComponent,
+    children: dashboardRoutes,
+    canActivate: [AuthGuard],
+    resolve: {
+      userType: UserTypeResolverService,
+    }
 },
 {
-  path: 'login',
-  component: LoginComponent,
-  data: { title: 'Login' }
+    path: 'login',
+    component: LoginComponent,
+    data: { title: 'Login' }
 },
 {
-  path: 'project-modelling/:id',
-  component: ProjectModellingComponent,
-  data: { title: 'Login' },
-  canActivate: [AuthGuard]
+    path: 'project-modelling/:id',
+    component: ProjectModellingComponent,
+    data: { title: 'Login' },
+    canActivate: [AuthGuard]
 },
 {
   path: 'sld-editor',
